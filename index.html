@@ -353,6 +353,210 @@
             margin-top: 5px;
         }
 
+        /* Forms */
+        .form-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: var(--background);
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--background);
+            color: var(--text);
+            border: 1px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            background: #eaecef;
+        }
+
+        /* Job Listings */
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .job-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .job-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .job-meta {
+            display: flex;
+            margin-bottom: 15px;
+            color: var(--neutral-gray);
+            font-size: 14px;
+        }
+
+        .job-meta span {
+            margin-right: 15px;
+        }
+
+        .job-meta i {
+            margin-right: 5px;
+        }
+
+        .applicant-stage {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .stage-indicator {
+            flex-grow: 1;
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            margin: 0 5px;
+            overflow: hidden;
+        }
+
+        .stage-progress {
+            height: 100%;
+            background: var(--accent-green);
+            border-radius: 3px;
+        }
+
+        /* Employee Cards */
+        .employee-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .employee-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .employee-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .employee-info {
+            margin-left: 15px;
+        }
+
+        .employee-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .employee-info p {
+            color: var(--neutral-gray);
+            font-size: 14px;
+        }
+
+        .employee-details p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .employee-details i {
+            margin-right: 10px;
+            color: var(--primary-blue);
+            width: 16px;
+        }
+
+        /* Payroll Items */
+        .payroll-history {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .payroll-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .payroll-date h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .payroll-date p {
+            color: var(--neutral-gray);
+            font-size: 14px;
+        }
+
+        .payroll-details {
+            margin: 15px 0;
+            flex-grow: 1;
+        }
+
+        .payroll-details p {
+            margin-bottom: 5px;
+        }
+
         /* Mobile Navigation */
         .mobile-nav {
             display: none;
@@ -440,7 +644,7 @@
                 margin-top: 15px;
             }
             
-            .stats-cards, .quick-cards {
+            .stats-cards, .quick-cards, .job-listings, .employee-cards, .payroll-history {
                 grid-template-columns: 1fr;
             }
             
@@ -769,6 +973,22 @@
                     </div>
                     <button class="btn btn-secondary" style="margin-top: 15px; width: 100%;">View Applications</button>
                 </div>
+                
+                <div class="job-card">
+                    <h3>HR Coordinator</h3>
+                    <div class="job-meta">
+                        <span><i class="fas fa-building"></i> Human Resources</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Chicago</span>
+                    </div>
+                    <p>Support our HR team with onboarding, employee engagement, and administrative tasks.</p>
+                    <div class="applicant-stage">
+                        <span>35 Applications</span>
+                        <div class="stage-indicator">
+                            <div class="stage-progress" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" style="margin-top: 15px; width: 100%;">View Applications</button>
+                </div>
             </div>
         </div>
         
@@ -865,6 +1085,38 @@
                     </div>
                     <button class="btn btn-secondary" style="width: 100%; margin-top: 15px;">View Profile</button>
                 </div>
+                
+                <div class="employee-card">
+                    <div class="employee-header">
+                        <div class="user-avatar">AR</div>
+                        <div class="employee-info">
+                            <h3>Amanda Rodriguez</h3>
+                            <p>Sales Manager</p>
+                        </div>
+                    </div>
+                    <div class="employee-details">
+                        <p><i class="fas fa-building"></i> Sales Department</p>
+                        <p><i class="fas fa-envelope"></i> amanda.r@example.com</p>
+                        <p><i class="fas fa-phone"></i> (555) 456-7890</p>
+                    </div>
+                    <button class="btn btn-secondary" style="width: 100%; margin-top: 15px;">View Profile</button>
+                </div>
+                
+                <div class="employee-card">
+                    <div class="employee-header">
+                        <div class="user-avatar">JW</div>
+                        <div class="employee-info">
+                            <h3>James Wilson</h3>
+                            <p>HR Specialist</p>
+                        </div>
+                    </div>
+                    <div class="employee-details">
+                        <p><i class="fas fa-building"></i> Human Resources</p>
+                        <p><i class="fas fa-envelope"></i> james.w@example.com</p>
+                        <p><i class="fas fa-phone"></i> (555) 234-5678</p>
+                    </div>
+                    <button class="btn btn-secondary" style="width: 100%; margin-top: 15px;">View Profile</button>
+                </div>
             </div>
         </div>
         
@@ -958,6 +1210,30 @@
                     <div class="payroll-details">
                         <p>138 employees</p>
                         <p><strong>$368,450</strong></p>
+                    </div>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+                
+                <div class="payroll-item">
+                    <div class="payroll-date">
+                        <h4>May 2025</h4>
+                        <p>Processed on May 29, 2025</p>
+                    </div>
+                    <div class="payroll-details">
+                        <p>135 employees</p>
+                        <p><strong>$362,100</strong></p>
+                    </div>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+                
+                <div class="payroll-item">
+                    <div class="payroll-date">
+                        <h4>April 2025</h4>
+                        <p>Processed on Apr 28, 2025</p>
+                    </div>
+                    <div class="payroll-details">
+                        <p>132 employees</p>
+                        <p><strong>$355,300</strong></p>
                     </div>
                     <button class="btn btn-secondary">View Details</button>
                 </div>
